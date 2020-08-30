@@ -1,0 +1,21 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract CarInsurance{
+    string Namead;
+    string modelofcar;
+    string compname;
+    string typeofinsu;
+    string insuplan;
+    int    durofinsu;
+    function CarInsurance(string newNamead,string newModelofcar,string newCompname,string newTypeofinsu,
+    string newInsuplan,int newDurofinsu) public {
+        Namead = newNamead;
+        modelofcar = newModelofcar;
+        compname = newCompname;
+        typeofinsu = newTypeofinsu;
+        insuplan = newInsuplan;
+        durofinsu = newDurofinsu;
+         }
+         function getCarInsurance() public view returns(string,string,string,string,string,int) {
+             return(Namead,modelofcar,compname,typeofinsu,insuplan,durofinsu);
+         }
+}
