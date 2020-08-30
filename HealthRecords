@@ -1,0 +1,21 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract Healthrecords{
+    string Nameofpatient;
+    string disease;
+    string doctorname;
+    string hospitalname;
+    string medicine;
+    int    durofdisease;
+    function Healthrecords(string newNameofpatient,string newDisease,string newDoctorname,string newHospitalname,
+    string newMedicine,int newDurofdisease) public {
+        Nameofpatient = newNameofpatient;
+        disease = newDisease;
+        doctorname = newDoctorname;
+        hospitalname = newHospitalname;
+        medicine = newMedicine;
+        durofdisease = newDurofdisease;
+         }
+         function getCarInsurance() public view returns(string,string,string,string,string,int) {
+             return(Nameofpatient,disease,doctorname,hospitalname,medicine,durofdisease);
+         }
+}
